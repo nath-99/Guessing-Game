@@ -6,24 +6,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes slideInLeft {
-  0% { opacity: 0;}
-    10% { opacity: 0.1;width: 100%; height: 100%;}
-    20% { opacity: 0.2;width: 100%; height: 100%;}
-    30% { opacity: 0.3;width: 100%; height: 100%;}
-    40% { opacity: 0.4;width: 100%; height: 100%;}
-    50% { opacity: 0.5;width: 100%; height: 100%;}
-    100% { opacity: 1;width: 100%; height: 100%;}
-}
-
 @keyframes fadeout {
     0% { opacity: 0;}
-    10% { opacity: 0.1;width: 100%; height: 70%;}
-    20% { opacity: 0.2;width: 100%; height: 70%;}
-    30% { opacity: 0.3;width: 100%; height: 70%;}
-    40% { opacity: 0.4;width: 100%; height: 70%;}
-    50% { opacity: 0.5;width: 100%; height: 70%;}
-    100% { opacity: 1;width: 100%; height: 70%;}
+    10% { opacity: 0.1;}
+    20% { opacity: 0.2;}
+    30% { opacity: 0.3;}
+    40% { opacity: 0.4;}
+    50% { opacity: 0.5;}
+    100% { opacity: 1;}
 }
 
 @keyframes fadein {
@@ -41,10 +31,11 @@ h1{
 }
 
 p{
-  color: #f6b70a;
+  color: #1504fd;
   font-size: xx-large;
 }
 
+/*
 #playBTN{
 	padding: 5px 10px;
 	font-size: 15px;
@@ -56,10 +47,11 @@ p{
 	border:0px;
 	height: auto;
 }
+*/
 
 #alerting
 {
-  animation-duration: 7s;
+  animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-name: fadein;
@@ -68,23 +60,23 @@ p{
 
 
 body{
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-name: slideInLeft;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      #f8bb2d,
+      #657ced
+  );
 }
 
 ::-webkit-input-placeholder { /* Edge */
   color: red;
-  font-size: 13px;
+  font-size: 29px;
   opacity: .4;
 }
 
 input[type="number"]{
-  width: 70px;
+  width: 150px;
+  height: 150px;
   font-weight: 600;
   color: #663399;
   padding: 20px 0;
@@ -97,7 +89,8 @@ input[type="number"]{
 
 #enter{
   cursor: pointer;
-  width: 160px;
+  width: 150px;
+  height: 150px;
   padding: 15px 0;
   border-radius: 5px;
   background-color: #663399;
@@ -109,19 +102,23 @@ input[type="number"]{
   outline: none;
 }
 
-#container{
+.container{
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-name: fadeout;
+  position: absolute;
   width: 100%;
   height: 70%;
-  position: absolute;
-  align-items: center;
+  transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(100deg, #b9e9a7d7 10%, #808dd6f6 90%);
+  background: linear-gradient(to left, #e2ecac, #e6cb9b);
+  padding: 50px 10px;
+  border-radius: 5px;
+  display: grid;
+  justify-items: center;
+  font-family: 'Poppins',sans-serif;
 }
 
 .restart-bn{
