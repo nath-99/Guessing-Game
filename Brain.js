@@ -1,64 +1,38 @@
-var output = document.getElementById("outputtext");
-var msga = document.getElementById("messegearray");
-var msg = document.getElementById("messege");
-var s = document.getElementById("container");
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+	<link rel="stylesheet" type="text/css" href="Style.css" >
+</head>
+<center>
+<body>
+	<h1>Guess The Number</h1></br>
 
-guessed_nums = [];
-while(guessed_nums.length>0){guessed_nums.pop();}
-var noofguess=0;
-var number = Math.floor(Math.random() * 500)+1;
-
-var audio = document.getElementById('audio');
-var playPauseBTN = document.getElementById('playBTN');
-var count = 0;
-
-function playm(){
-	if(count==0)
-	{
-		count = 1;
-		audio.play();
-		playPauseBTN.innerHTML = "Stop";
-	}
-	else{
-		count = 0;
-		audio.pause();
-	    audio.currentTime = 0;
-		playPauseBTN.innerHTML = "music &#127911;";
-	}
-}
-
-
-function play()
-{
-    
-
-    noofguess+=1;
-
-    var user_input = document.getElementById("input").value;
-
-	if(user_input < 1 || user_input > 500){
-        alert("Please enter a number between 1 and 500");
-    }
-
-	else 
-	{
-	guessed_nums.push(user_input);
-
-	if(Math.abs(user_input-number)<=5 && Math.abs(user_input-number)>0)output.textContent="You are very close "+String.fromCodePoint(0x1F600);
+    <div>
+		<audio id="audio" loop>
+			<audio><source src="Atch - Traveller.mp3" type="audio/mpeg"></audio>
+		    <!--<audio><source src="Ooyy - Come 2gether.mp3" type="audio/mpeg"></audio>
+			<audio><source src="Ooyy - Gelatin Nature.mp3" type="audio/mpeg"></audio>-->
+		</audio>
+		<button id="playBTN" onclick="playm()">music&#127911;</button>
+	</div>
 	
-	else if(user_input>number && Math.abs(user_input-number)>5)output.textContent="Enter a lower number plzz "+String.fromCodePoint(0x1F615);
+
+	<div class="restart">
+    </br><button class="restart-bn" id="restart" onclick="window.location.reload()">Reset</button></br></br></br></br></div>
+
+	<div class="container" id="container">
+	<p id="head">Guess a number below 1000</p></br>
+	<p id="alerting">Within 5 unit radious U get <mark>Very Close</mark> msg!</br>If U dare <span>&#128074;&#127995;</span> Do It!</p></br>
+		<p id="outputtext"></p></br>
+		<p id="messegearray"></p></br>
+		</br><input type="number" id="input" max="1000" min="0" placeholder="Guess It" required >
+		<button onclick="play()" id="enter" class="bn">Let's See</button></br>
+    </br></br><p id="messege"></p>
+	</div>
 	
-	else if(user_input<number && Math.abs(user_input-number)>5)output.textContent="Enter a higher number plzz "+String.fromCodePoint(0x1F615);
-	
-	else { output.textContent = "Hurr...ah you guessed it correct "+String.fromCodePoint(0x1F60E) ; mseg(noofguess-1); }
+	<script type="text/javascript" src="Brain.js"></script>
 
-	msga.textContent = "Guessed numbers are: " +guessed_nums;
-   }
-}
-
-function mseg(noofguess)
-{
-    if(noofguess<10)msg.textContent="You guessed it Right after "+ noofguess +" attempts "+String.fromCodePoint(0x1F929)+" Good job";
-
-	else msg.textContent="You guessed it after "+ noofguess +" attempts "+String.fromCodePoint(0x1F642)+" Do better guesses nxt time";
-}
+</body>
+</center>
+</html>
