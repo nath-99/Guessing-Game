@@ -29,7 +29,7 @@ function playm()
 	}
 }
 */
-document.getElementById("attempt").textContent="You Have total : "+attempts.toString();
+document.getElementById("attempt").textContent="You Have total : "+attempts.toString()+" attempts";
 
 function play()
 {   
@@ -47,7 +47,7 @@ function play()
 
 	if(attempts<=2){document.getElementById("attempt").style.color = "red";}
 
-	document.getElementById("attempt").textContent=" Now You Have total : "+attempts.toString()+" left";
+	document.getElementById("attempt").textContent=" Now You Have total : "+attempts.toString()+" attempts left";
 
 	guessed_nums.push(user_input);
 
