@@ -7,22 +7,23 @@
 }
 
 @keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { opacity: 0;}
+    10% { opacity: 0.1;width: 100%; height: 100%;}
+    20% { opacity: 0.2;width: 100%; height: 100%;}
+    30% { opacity: 0.3;width: 100%; height: 100%;}
+    40% { opacity: 0.4;width: 100%; height: 100%;}
+    50% { opacity: 0.5;width: 100%; height: 100%;}
+    100% { opacity: 1;width: 100%; height: 100%;}
 }
 
 @keyframes fadeout {
     0% { opacity: 0;}
-    10% { opacity: 0.1;width: 600px; height: 340px;}
-    20% { opacity: 0.2;width: 600px; height: 340px;}
-    30% { opacity: 0.3;width: 600px; height: 340px;}
-    40% { opacity: 0.4;width: 600px; height: 340px;}
-    50% { opacity: 0.5;width: 600px; height: 340px;}
-    100% { opacity: 1;width: 600px; height: 340px;}
+    10% { opacity: 0.1;width: 100%; height: 70%;}
+    20% { opacity: 0.2;width: 100%; height: 70%;}
+    30% { opacity: 0.3;width: 100%; height: 70%;}
+    40% { opacity: 0.4;width: 100%; height: 70%;}
+    50% { opacity: 0.5;width: 100%; height: 70%;}
+    100% { opacity: 1;width: 100%; height: 70%;}
 }
 
 @keyframes fadein {
@@ -41,6 +42,7 @@ h1{
 
 p{
   color: #f6b70a;
+  font-size: xx-large;
 }
 
 #playBTN{
@@ -57,7 +59,7 @@ p{
 
 #alerting
 {
-  animation-duration: 12s;
+  animation-duration: 7s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-name: fadein;
@@ -70,7 +72,7 @@ body{
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-name: slideInLeft;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
@@ -112,9 +114,10 @@ input[type="number"]{
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-name: fadeout;
-  width: 600px;
-  height: 340px;
+  width: 100%;
+  height: 70%;
   position: absolute;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
