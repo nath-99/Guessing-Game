@@ -22,14 +22,17 @@
     <button class="restart-bn" id="restart" onclick="window.location.reload()">Reset</button></br></br></br></br></div>
 
 	<div class="container" id="container">
+		<p id="alerting">I<span>&#128187;</span>'ve a secret number for U b/w 1 & 1000!</br><b>Ur Task</br> U've to guess It!</b></p></br>
 	<p id="head">Guess a number b/w 1 & 1000</p></br>
 	<p id="alerting">Within 5 unit radious U get <mark>Very Close</mark> msg!</br>If U dare <span>&#128074;&#127995;</span> Do It!</p></br>
+	    <p id="attempt"></p></br>
 		<p id="outputtext"></p></br>
 		<p id="messegearray"></p></br>
 		<center></br><input type="number" id="input" max="1000" min="0" placeholder="Guess It" required >
 		<button onclick="play()" id="enter" class="bn">Let's See</button></br></center>
         <p id="messege"></p>
 	</div>
+	<p id="lost"></p>
 	
 	<script type="text/javascript" src="Brain.js"></script>
 
