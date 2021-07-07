@@ -12,6 +12,7 @@ var audio = document.getElementById('audio');
 var playPauseBTN = document.getElementById('playBTN');
 var count = 0;
 
+/*
 function playm()
 {
 	if(count==0)
@@ -27,7 +28,7 @@ function playm()
 		playPauseBTN.innerHTML = "music &#127911;";
 	}
 }
-
+*/
 
 function play()
 {noofguess+=1;
