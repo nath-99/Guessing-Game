@@ -2,28 +2,22 @@
 <html>
 <head>
 	<title>Guessing Game</title>
-	<link rel="stylesheet" type="text/css" href="Style.css" >
+	<link
+      href="https://fonts.googleapis.com/css2?family=Kristi&display=swap"
+      rel="stylesheet"
+    />
+	<link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <center>
 <body>
 	<h1>Guess The Number</h1></br></br>
-	<!--
-    <div>
-		<audio id="audio" loop>
-			<source src="Atch - Traveller.mp3" type="audio/mpeg">
-		    <audio><source src="Ooyy - Come 2gether.mp3" type="audio/mpeg"></audio>
-			<audio><source src="Ooyy - Gelatin Nature.mp3" type="audio/mpeg"></audio>
-		</audio>
-		<button id="playBTN" onclick="playm()">music&#127911;</button>
-	</div>
-    -->
 
 	<div class="restart">
     <button class="restart-bn" id="restart" onclick="window.location.reload()">Reset</button></br></br></br></br></div>
 
 	<div class="container" id="container">
-		<p id="alerting">I<span>&#128187;</span>'ve a secret number for U b/w 1 & 1000!</br><b>Ur Task</br> U've to guess It!</b></p></br>
-	<p id="head">Guess a number b/w 1 & 1000</p></br>
+		<p id="alerting">I<span>&#128187;</span>'ve a secret number for U btw 1 & 1000!</br><b>Ur Task</br> U've to guess It!</b></p></br>
+	<p id="head">Guess a number btw 1 & 1000</p></br>
 	<p id="alerting">Within 5 unit radious U get <mark>Very Close</mark> msg!</br>If U dare <span>&#128074;&#127995;</span> Do It!</p></br>
 	    <p id="attempt"></p></br>
 		<p id="outputtext"></p></br>
@@ -33,9 +27,8 @@
         <p id="messege"></p>
 	</div>
 	<p id="lost"></p>
-	
-	<script type="text/javascript" src="Brain.js"></script>
-
+	<script type="text/javascript" src="./confetti.js"></script>
+    <script type="text/javascript" src="Brain.js" ></script>
 </body>
 </center>
 </html>
