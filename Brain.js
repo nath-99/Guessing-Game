@@ -99,7 +99,7 @@ function play()
 		document.getElementById("enter").style.display="none";
 		document.getElementById("input").style.display="none";
 		output.textContent = "Hurr...ah you guessed it correct "+String.fromCodePoint(0x1F60E) ; 
-		mseg(noofguess-1); 
+		mseg(noofguess); 
 	}
 	msga.textContent = "Guessed numbers are: " +guessed_nums;
    }
