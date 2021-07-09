@@ -136,5 +136,18 @@ input[type="number"]{
 {
   text-shadow: 0 0 2rem rgba(0,0, 0, 0.5);
   font-family: "Kristi", cursive;
-  font-size: 60px;
+  font-size: 30px;
+}
+
+#developer
+{
+  font-family: 'Bubblegum Sans', cursive;
+  text-shadow: 0 0 2rem rgba(0,0, 0, 0.5);
+  position : absolute;
+  padding: 70px 350px;
+  text-align: center;
+  bottom : 0;
+  font-size: 40px;
+  opacity: 0.3;
+  color: #000;
 }
