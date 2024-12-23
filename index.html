@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="header-container">
+        <h1>Guess The Number</h1>
+        <button class="restart-bn" id="restart" onclick="window.location.reload()">Reset</button>
+    </div>
+
+        <div class="container" id="container">
+            <p id="alerting">I <span>&#128187;</span> have a secret number between 1 & 1000! <b>Your Task: Guess it!</b></p>
+            <p id="head">Guess a number between 1 & 1000</p>
+            <p id="alerting">Within 5 unit radious U get <mark>Very Close</mark> msg!</br>If U dare <span>&#128074;&#127995;</span> Do It!</p></br>
+            <p id="attempt"></p>
+            <p id="outputtext"></p>
+            <p id="messegearray"></p>
+
+            <div class="input-container">
+                <input type="number" id="input" max="1000" min="0" placeholder="Guess It" required>
+                <button onclick="play()" id="enter" class="bn">Let's See</button>
+            </div>
+            <p id="messege"></p>
+        </div>
+        <p id="lost"></p>
+        <p id="developer">Developed by Tirthankar Nath</p>
+    </div>
+
+    <script type="text/javascript" src="./confetti.js"></script>
+    <script type="text/javascript" src="Brain.js"> </script>
+	<script window.onload = () => {
+		const inputField = document.getElementById("input");
+		inputField.focus(); // Focus the input field when the page loads
+	};
+	</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center;
+  background: linear-gradient(to right, #f8bb2d, #657ced);
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px; /* Adds space around the header */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header-container h1 {
+  font-family: 'Bubblegum Sans', cursive; /* Use a fun and bold font */
+    font-size: 6vh; /* Slightly larger font size */
+    color: #7dd87d; /* A vibrant color to draw attention */
+    margin: 20px 0; /* Add more space around the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    line-height: 1.2; /* Ensure proper spacing between lines if the text wraps */
+    text-align: center; /* Center the text */
+}
+
+.header-container .restart-bn {
+  background: #3498db;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-container .restart-bn:hover {
+  background: #2980b9;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 30px; /* Space below the header */
+  background: linear-gradient(to right, #a8e6cf, #dcedc1); /* Lighter pastel gradient (mint to light green) */
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  transition: transform 1s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+
+@keyframes fadein {
+  0% { opacity: 0;}
+  10% { opacity: 0.1;}
+  20% { opacity: 0.2;}
+  30% { opacity: 0.3;}
+  40% { opacity: 0.4;}
+  50% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
+
+@keyframes fadeout {
+  0% { opacity: 1;}
+  10% { opacity: 0.9;}
+  20% { opacity: 0.8;}
+  30% { opacity: 0.7;}
+  40% { opacity: 0.6;}
+  50% { opacity: 0.3;}
+  100% { opacity: 0;}
+}
+
+h1 {
+  color: #03f87ef6;
+  font-size: 2rem;
+}
+
+p {
+  color: #1504fd;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#alerting {
+  animation-duration: 18s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-name: fadeout;
+  animation-fill-mode: forwards;
+}
+
+.input-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 80%;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #202020;
+  margin-bottom: 20px;
+}
+
+#enter {
+  cursor: pointer;
+  width: 150px;
+  height: 100px;
+  padding: 15px 0;
+  border-radius: 5px;
+  background-color: #28a745; /* Greenish color for consistency */
+  color: #ffffff;
+  border: none;
+  font-size: 2rem; /* Responsive font size */
+  font-weight: 600;
+  margin-bottom: 30px;
+  outline: none;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effect */
+}
+
+#enter:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+input[type="number"]::placeholder {
+  color: rgba(255, 0, 0, 0.2); /* Red with 20% opacity */
+  font-size: 3vw; /* Use viewport width for responsive font size */
+  font-style: italic; /* Optional: Make it italic */
+  opacity: 0.5; /* More transparent */
+}
+
+#enter:disabled {
+  background-color: #ccc;
+}
+
+#messege {
+  font-size: 1.2rem;
+  font-family: 'Kristi', cursive;
+}
+
+#developer {
+  font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.5rem;
+    color: #000;
+    position: relative; /* Use relative positioning */
+    margin-top: 20px;   /* Add spacing above it to separate it from other content */
+    text-align: center;
+    opacity: 0.5;
+    padding: 10px 0;    /* Add padding for visual spacing */
+}
+
+.restart-bn {
+  background: #3498db;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 90%; /* Ensure it's not too wide on mobile devices */
+      padding: 20px 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .header-container h1 {
+      font-size: 3rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container h1 {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .header-container .restart-bn {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container h1 {
+      font-size: 2rem; /* Further reduction for very small screens */
+  }
+
+  .header-container .restart-bn {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container h1 {
+      font-size: 2.5rem; /* Reduce size on smaller screens */
+  }
+
+  .header-container .restart-bn {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container h1 {
+      font-size: 2rem; /* Further reduction for very small screens */
+  }
+
+  .header-container .restart-bn {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #enter {
+      width: 120px;
+      height: 120px;
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #enter {
+      width: 100px;
+      height: 100px;
+      font-size: 1.2rem;
+  }
+}
