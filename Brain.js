@@ -33,23 +33,7 @@ setTimeout(function () {
 }, 6000);
 };
 
-/*
-function playm()
-{
-	if(count==0)
-	{
-		count = 1;
-		audio.play();
-		playPauseBTN.innerHTML = "Stop";
-	}
-	else{
-		count = 0;
-		audio.pause();
-	    audio.currentTime = 0;
-		playPauseBTN.innerHTML = "music &#127911;";
-	}
-}
-*/
+
 document.getElementById("attempt").textContent="You Have total : "+attempts.toString()+" attempts";
 
 function play()
@@ -57,8 +41,6 @@ function play()
 	var clk = new Audio('Click.mp3');
 	clk.playbackRate = 2.0;
 	clk.play();
-
-	noofguess+=1;
 
     var user_input = document.getElementById("input").value;
 
@@ -68,6 +50,8 @@ function play()
 
 	else 
 	{
+noofguess+=1;
+		
     attempts-=1;
 
 	if(attempts<=2){document.getElementById("attempt").style.color = "red";}
