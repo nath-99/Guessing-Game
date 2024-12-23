@@ -86,9 +86,9 @@ function play()
 		output.textContent="You are very close "+String.fromCodePoint(0x1F600);
 	}
 	
-	else if(user_input>number && Math.abs(user_input-number)>5)output.textContent="Enter a lower number plzz "+String.fromCodePoint(0x1F615);
+	else if(user_input>number && Math.abs(user_input-number)>5)output.textContent="Enter a lower number "+String.fromCodePoint(0x1F615);
 	
-	else if(user_input<number && Math.abs(user_input-number)>5)output.textContent="Enter a higher number plzz "+String.fromCodePoint(0x1F615);
+	else if(user_input<number && Math.abs(user_input-number)>5)output.textContent="Enter a higher number "+String.fromCodePoint(0x1F615);
 	
 	else 
 	{
